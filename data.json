@@ -1,0 +1,127 @@
+{
+  "vehicles": [
+    {
+      "vehicleNumber": "MH12AB1234",
+      "make": "Maruti Suzuki",
+      "model": "Swift Dzire",
+      "color": "White",
+      "chassisNumber": "MAJF23E678912",
+      "theftDate": "2023-05-15",
+      "theftLocation": "Pune, Shivajinagar",
+      "firNumber": "FIR/4567/2023",
+      "policeStation": "Shivajinagar Police Station",
+      "ownerName": "Rajesh Kumar",
+      "ownerContact": "9876543210",
+      "ownerAddress": "A-102, Lakshmi Apartments, Pune",
+      "detectionTimestamp": "2023-05-20 14:35:22",
+      "detectionLocation": "Mumbai-Pune Expressway, Toll Naka",
+      "cameraId": "CAM_EXP_12",
+      "confidence": "92.5",
+      "detectionImage": "https://media.istockphoto.com/id/1336889543/video/video-surveillance-on-the-motorway-license-plate-reading-camera.avif?s=640x640&k=20&c=_cwc83PmbvR67RKS5atCMvP9rl43xdhukB3eZBbbylg=",
+      "status": "Detected",
+      "hotlistLevel": "High",
+      "investigationUpdates": [
+        {
+          "date": "2023-05-16",
+          "update": "Initial investigation launched, CCTV footage collected"
+        },
+        {
+          "date": "2023-05-20",
+          "update": "Vehicle detected on Mumbai-Pune Expressway"
+        }
+      ]
+    },
+    {
+      "vehicleNumber": "MH01XY5678",
+      "make": "Hyundai",
+      "model": "Creta",
+      "color": "Red",
+      "chassisNumber": "HYDC56T901234",
+      "theftDate": "2023-06-10",
+      "theftLocation": "Mumbai, Bandra",
+      "firNumber": "FIR/7890/2023",
+      "policeStation": "Bandra Police Station",
+      "ownerName": "Priya Singh",
+      "ownerContact": "8765432109",
+      "ownerAddress": "B-25, Sea View Apartments, Bandra West, Mumbai",
+      "detectionTimestamp": "2023-06-12 09:15:47",
+      "detectionLocation": "Eastern Freeway, Near Chembur",
+      "cameraId": "CAM_EF_08",
+      "confidence": "88.3",
+      "detectionImage": "https://media.istockphoto.com/id/680128580/video/traffic.avif?s=640x640&k=20&c=YMcpnQz-qk2x3DDI9ZygcRQIyxVWmE3kFIOphghCODc=",
+      "status": "Recovered",
+      "hotlistLevel": "Medium",
+      "investigationUpdates": [
+        {
+          "date": "2023-06-11",
+          "update": "FIR registered, alerts sent to all toll nakas"
+        },
+        {
+          "date": "2023-06-12",
+          "update": "Vehicle detected on Eastern Freeway"
+        },
+        {
+          "date": "2023-06-12",
+          "update": "Vehicle recovered, 2 suspects apprehended"
+        }
+      ]
+    },
+    {
+      "vehicleNumber": "MH43CD9999",
+      "make": "Toyota",
+      "model": "Innova",
+      "color": "Silver",
+      "chassisNumber": "TOYI78R556789",
+      "theftDate": "2023-07-01",
+      "theftLocation": "Nagpur, Sitabuldi",
+      "firNumber": "FIR/1234/2023",
+      "policeStation": "Sitabuldi Police Station",
+      "ownerName": "Vikram Patel",
+      "ownerContact": "7654321098",
+      "ownerAddress": "C-45, Green Park Colony, Nagpur",
+      "detectionTimestamp": "2023-07-03 18:20:33",
+      "detectionLocation": "Nagpur-Mumbai Highway, Wardha Junction",
+      "cameraId": "CAM_NM_05",
+      "confidence": "95.1",
+      "detectionImage": "https://th-i.thgim.com/public/incoming/z9ac4h/article69467524.ece/alternates/LANDSCAPE_1200/Traffic%20conjection%203.jpg",
+      "status": "Active",
+      "hotlistLevel": "Critical",
+      "investigationUpdates": [
+        {
+          "date": "2023-07-02",
+          "update": "State-wide alert issued"
+        },
+        {
+          "date": "2023-07-03",
+          "update": "Vehicle spotted on Nagpur-Mumbai Highway"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "totalStolen": 156,
+    "recovered": 89,
+    "detectedThisMonth": 12,
+    "recoveryRate": "57%"
+  },
+  "recentDetections": [
+    {
+      "vehicleNumber": "MH12AB1234",
+      "detectionTime": "2023-05-20 14:35:22",
+      "location": "Mumbai-Pune Expressway",
+      "confidence": "92.5%"
+    },
+    {
+      "vehicleNumber": "GJ05RT6789",
+      "detectionTime": "2023-05-19 11:20:15",
+      "location": "Nashik Highway",
+      "confidence": "89.2%"
+    },
+    {
+      "vehicleNumber": "MH03JK4567",
+      "detectionTime": "2023-05-18 16:45:30",
+      "location": "Thane Checkpoint",
+      "confidence": "94.7%"
+    }
+  ]
+}

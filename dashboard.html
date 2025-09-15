@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Maharashtra Police</title>
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="https://i.postimg.cc/Zn6gtxPg/cropped-circle-image-1.png" alt="Maharashtra Police Logo">
+            <div>
+                <h1>Maharashtra Police Stolen Vehicle System</h1>
+                <p class="user-info" id="userInfo"></p>
+            </div>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </header>
+    
+    <main class="dashboard-container">
+        <!-- Dashboard Stats -->
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Total Stolen Vehicles</h3>
+                <p id="totalVehicles">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Detected This Month</h3>
+                <p id="monthlyDetections">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Recovery Rate</h3>
+                <p id="recoveryRate">0%</p>
+            </div>
+        </div>
+        
+        <!-- Recent Detections -->
+        <div class="recent-detections">
+            <h2>Recent Detections</h2>
+            <div class="detections-list" id="detectionsList">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+        
+        <!-- Search Section -->
+        <div class="search-section">
+            <h2>Search Stolen Vehicle</h2>
+            <div class="search-tabs">
+                <button class="tab-link active" data-tab="basic">Basic Search</button>
+                <button class="tab-link" data-tab="advanced">Advanced Search</button>
+            </div>
+            
+            <form id="searchForm">
+                <div id="basic-tab" class="tab-content active">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vehicleNumber">Vehicle Number</label>
+                            <input type="text" id="vehicleNumber" placeholder="e.g. MH12AB1234">
+                        </div>
+                        <div class="form-group">
+                            <label for="chassisNumber">Chassis Number (Last 6 digits)</label>
+                            <input type="text" id="chassisNumber" placeholder="e.g. 123456">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="advanced-tab" class="tab-content">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="make">Vehicle Make</label>
+                            <select id="make">
+                                <option value="">Select Make</option>
+                                <option value="Maruti Suzuki">Maruti Suzuki</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Tata">Tata</option>
+                                <option value="Mahindra">Mahindra</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="color">Color</label>
+                            <select id="color">
+                                <option value="">Select Color</option>
+                                <option value="White">White</option>
+                                <option value="Red">Red</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Black">Black</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Gray">Gray</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dateFrom">Theft Date From</label>
+                            <input type="date" id="dateFrom">
+                        </div>
+                        <div class="form-group">
+                            <label for="dateTo">Theft Date To</label>
+                            <input type="date" id="dateTo">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="location">Theft Location</label>
+                            <input type="text" id="location" placeholder="Enter location">
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit">Search</button>
+                <button type="button" id="resetBtn">Reset</button>
+            </form>
+        </div>
+        
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            <h2>Search Results</h2>
+            <div id="vehicleDetails" class="vehicle-details">
+                <!-- Vehicle details will be populated here by JavaScript -->
+            </div>
+        </div>
+        
+        <div id="noResults" class="no-results hidden">
+            <p>No stolen vehicle found with the provided details.</p>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+</body>
+</html>

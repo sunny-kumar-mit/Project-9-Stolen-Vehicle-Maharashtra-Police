@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maharashtra Police - Login</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="https://i.postimg.cc/Zn6gtxPg/cropped-circle-image-1.png">
+            <h2>Maharashtra Police</h2>
+            <h3>Stolen Vehicle Tracking System</h3>
+        </div>
+        <form id="loginForm" class="login-form">
+            <div class="form-group">
+                <label for="badgeId">Badge ID</label>
+                <input type="text" id="badgeId" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p id="errorMsg" class="error-message"></p>
+        </form>
+
+        <!-- Loading overlay shown after clicking Login -->
+        <div id="loadingOverlay" class="loading-overlay hidden" aria-hidden="true" role="status" aria-live="polite">
+            <div class="loader">
+                <div class="spinner" aria-hidden="true"></div>
+                <div class="loader-text">Please wait…</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+</body>
+</html>
